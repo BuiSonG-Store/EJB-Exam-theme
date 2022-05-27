@@ -46,16 +46,18 @@ const Candidate = () => {
   };
 
   return (
-    <>
-      <button
-        type="button"
-        className="btn btn-success"
-        onClick={() => {
-          toggleForm();
-        }}
-      >
-        Add Candidate
-      </button>
+    <div >
+      <div className={css.main}>
+          <button
+              type="button"
+              className="btn btn-success"
+              onClick={() => {
+                  toggleForm();
+              }}
+          >
+              Add Candidate
+          </button>
+      </div>
       {showForm && <FormCandidate setShowForm={setShowForm} />}
       <div className={css.main}>
         <table className="col-md-10 table">
@@ -73,7 +75,7 @@ const Candidate = () => {
         </table>
         <Pagination count={listCandidate?.count} />
       </div>
-    </>
+    </div>
   );
 };
 
